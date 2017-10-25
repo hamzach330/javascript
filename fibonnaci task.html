@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+
+
+function fib(n) {
+  if (n < 2) {
+    return 1;
+  } else {
+    return fib(n - 2) + fib(n - 1);
+	}
+}
+
+function isEven(n) 
+
+			{
+				return n % 2 == 0;
+			}
+
+			
+function task()
+{	var i =1;
+	var temp = 0;
+	var t=0;
+	
+	
+	while(fib(i) <= 4000000)
+	{
+			t = fib(i);
+			if (isEven(t))
+			{
+				 temp = temp + t;
+			}
+			document.write("<br />"+fib(i));
+			i++;
+	
+	}
+		 
+			document.write("<br /> The Sum of All Even Numbers is ::"+temp);	
+	
+}
+
+</script>
+<head>
+  <meta charset="utf-8">
+  <title>Fibonacci Series</title>
+</head>
+<body>
+<button type="button" onclick="task()">
+Click Me!
+</button>
+</body>
+</html>
